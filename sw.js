@@ -1,6 +1,6 @@
 // Gregor's Vokabeln – minimal service worker (installability + offline fallback).
 // Network-first: a fresh daily trainer always wins when online; the cached copy is used only offline.
-var C = "gv-v2";
+var C = "gv-v3";  // pages: index.html (start), schrift.html, vokabeln.html, heute.html
 self.addEventListener("install", function (e) { self.skipWaiting(); });
 self.addEventListener("activate", function (e) {
   e.waitUntil(caches.keys().then(function (ks) { return Promise.all(ks.filter(function (k) { return k !== C; }).map(function (k) { return caches.delete(k); })); }).then(function () { return self.clients.claim(); }));

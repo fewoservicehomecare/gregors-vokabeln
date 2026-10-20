@@ -109,6 +109,7 @@ textarea{width:100%;font:inherit;font-size:1rem;padding:10px;border-radius:10px;
     progEl.textContent = due.length ? due.length + " fällig" : "";
     var h = "";
     if (VPAUSED) { h += '<div class=paused>Die Vokabeln sind pausiert. Jetzt lernst du zuerst die Schrift – die Vokabeln warten und gehen später genau dort weiter.</div>'; }
+    h += '<div style="text-align:right;margin:4px 0 8px"><a href="laute.html" style="display:inline-block;padding:7px 12px;border-radius:8px;background:#138808;color:#fff;text-decoration:none;font-size:15px">Laut-Tabelle 🗣</a></div>';
     var inner = '<div class=dir>Schrift · ' + esc(de(TODAY)) + "</div>";
     if (nl) {
       var first = byId(nl.letters[0]);

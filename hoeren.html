@@ -1,0 +1,53 @@
+<!doctype html><html lang=de><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<title>Hindi hören – Fach 1</title><meta name="theme-color" content="#FF9933">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="manifest" href="manifest.webmanifest">
+<style>
+html,body{margin:0;min-height:100%}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Sans Devanagari',sans-serif;background:#f6f4ef;color:#222;display:flex;flex-direction:column;min-height:100vh}
+.tabs{display:flex;background:#5c2009}
+.tab{flex:1;text-align:center;color:#f6dcc4;text-decoration:none;padding:9px 6px;font-weight:600;font-size:.95rem;border-bottom:3px solid transparent}
+.tab.on{color:#fff;border-bottom-color:#f2b84b;background:#7a2e0e}
+main{max-width:640px;width:100%;margin:0 auto;padding:14px;box-sizing:border-box}
+h1{color:#7a2e0e;font-size:1.35rem;margin:6px 0 4px}
+.meta{color:#7d6a55;font-size:.95rem;margin-bottom:12px}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:14px;margin-bottom:14px}
+audio{width:100%}
+.btn{display:block;text-align:center;margin-top:12px;background:#FF9933;color:#fff;font-weight:700;text-decoration:none;padding:13px;border-radius:12px;font-size:1.05rem}
+.hint{font-size:.85rem;color:#8a7760;margin-top:8px}
+.warn{background:#fff3cd;border:1px solid #f2b84b;color:#6b4a00;border-radius:12px;padding:10px 12px;margin-bottom:12px;font-weight:600}
+.err{background:#fde2e1;border:1px solid #d9534f;color:#7a1410;border-radius:12px;padding:10px 12px;margin-bottom:12px;font-weight:600}
+.hidden{display:none}
+ol{margin:0;padding-left:1.6em}li{padding:7px 0;border-bottom:1px solid #f0e8dc}li:last-child{border-bottom:0}
+.hi{font-size:1.35rem;color:#7a2e0e}.tr{color:#8a7760;margin-left:6px}.de{display:block;color:#333}
+.back{display:inline-block;margin:4px 0 20px;color:#7a2e0e;font-weight:600}
+</style></head><body>
+<nav class=tabs><a href="schrift.html" class="tab">Schrift</a><a href="vokabeln.html" class="tab">Vokabeln</a><a href="hoeren.html" class="tab on">Hören</a></nav>
+<main>
+<h1>Hindi hören – Fach 1</h1>
+<div class=meta id=meta>Lade …</div>
+<div id=err class="err hidden"></div>
+<div id=warn class="warn hidden"></div>
+<div class=card id=playcard>
+ <audio id=player controls preload=metadata></audio>
+ <a id=dl class=btn download>⬇ MP3 herunterladen (offline)</a>
+ <div class=hint>Ablauf je Wort: Hindi · 2 s Denkpause · Deutsch · 1 s · Hindi · 3 s</div>
+</div>
+<div class=card><ol id=list></ol></div>
+<a class=back href="./">← zurück zum Trainer</a>
+</main>
+<script>
+function istToday(){return new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kolkata'}).format(new Date());}
+function de(d){var p=d.split('-');return p[2]+'.'+p[1]+'.'+p[0];}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+fetch('hoeren/stand.json?t='+Date.now(),{cache:'no-store'}).catch(function(){return fetch('hoeren/stand.json');})
+.then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(function(s){
+ var m=document.getElementById('meta'),w=document.getElementById('warn'),e=document.getElementById('err');
+ if(s.fehler){e.textContent='Heute keine Hördatei: '+s.fehler;e.classList.remove('hidden');
+  document.getElementById('playcard').classList.add('hidden');m.textContent='Stand '+de(s.stand);return;}
+ var src='hoeren/heute.mp3?v='+s.hash.slice(0,12);
+ document.getElementById('player').src=src;var dl=document.getElementById('dl');dl.href=src;dl.download='hindi_fach1_'+s.audio_erstellt+'.mp3';
+ m.textContent='Erstellt: '+de(s.audio_erstellt)+' · geprüft: '+de(s.stand)+' · '+s.anzahl+' Wörter · '+Math.round(s.dauer_s/60*10)/10+' min';
+ if(s.stand!==istToday()){w.textContent='Achtung: Stand ist vom '+de(s.stand)+', nicht von heute ('+de(istToday())+'). Die tägliche Aktualisierung ist offenbar ausgefallen.';w.classList.remove('hidden');}
+ document.getElementById('list').innerHTML=s.woerter.map(function(x){return '<li><span class=hi>'+esc(x.hindi)+'</span><span class=tr>'+esc(x.translit)+'</span><span class=de>'+esc(x.de)+'</span></li>';}).join('');
+}).catch(function(x){var e=document.getElementById('err');e.textContent='Stand konnte nicht geladen werden ('+x.message+').';e.classList.remove('hidden');document.getElementById('meta').textContent='';});
+</script></body></html>

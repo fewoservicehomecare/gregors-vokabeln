@@ -1,0 +1,101 @@
+{
+ "stand": "2026-11-07",
+ "audio_erstellt": "2026-11-07",
+ "hash": "50b81c60f5ef93b126a28bb986d2f291f0fbda0ff347da2780f82fb5ec8f9d41",
+ "anzahl": 15,
+ "dauer_s": 121.0,
+ "stimme": "de_DE-thorsten-high",
+ "woerter": [
+  {
+   "id": "296",
+   "hindi": "इधर",
+   "translit": "idhar",
+   "de": "hierher, hier"
+  },
+  {
+   "id": "163",
+   "hindi": "ऐसा",
+   "translit": "aisā",
+   "de": "so, solch"
+  },
+  {
+   "id": "962",
+   "hindi": "ओर",
+   "translit": "or",
+   "de": "Seite, Richtung"
+  },
+  {
+   "id": "19",
+   "hindi": "कहाँ",
+   "translit": "kahāṁ",
+   "de": "wo"
+  },
+  {
+   "id": "8",
+   "hindi": "ठीक",
+   "translit": "ṭhīk",
+   "de": "richtig, in Ordnung"
+  },
+  {
+   "id": "692",
+   "hindi": "ढाबा",
+   "translit": "ḍhābā",
+   "de": "Garküche"
+  },
+  {
+   "id": "333",
+   "hindi": "उधर",
+   "translit": "udhar",
+   "de": "dorthin, dort"
+  },
+  {
+   "id": "681",
+   "hindi": "किधर",
+   "translit": "kidhar",
+   "de": "wohin, in welche Richtung"
+  },
+  {
+   "id": "48",
+   "hindi": "तीन",
+   "translit": "tīn",
+   "de": "drei"
+  },
+  {
+   "id": "6",
+   "hindi": "नहीं",
+   "translit": "nahīṁ",
+   "de": "nein, nicht"
+  },
+  {
+   "id": "37",
+   "hindi": "यहाँ",
+   "translit": "yahāṁ",
+   "de": "hier"
+  },
+  {
+   "id": "65",
+   "hindi": "लेकिन",
+   "translit": "lekin",
+   "de": "aber"
+  },
+  {
+   "id": "31",
+   "hindi": "लेना",
+   "translit": "lenā",
+   "de": "nehmen"
+  },
+  {
+   "id": "38",
+   "hindi": "वहाँ",
+   "translit": "vahāṁ",
+   "de": "dort"
+  },
+  {
+   "id": "61",
+   "hindi": "कैसे",
+   "translit": "kaise",
+   "de": "wie"
+  }
+ ],
+ "fehler": null
+}

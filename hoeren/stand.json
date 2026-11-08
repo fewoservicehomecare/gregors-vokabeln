@@ -1,28 +1,28 @@
 {
- "stand": "2026-11-08",
- "audio_erstellt": "2026-11-07",
- "hash": "50b81c60f5ef93b126a28bb986d2f291f0fbda0ff347da2780f82fb5ec8f9d41",
+ "stand": "2026-11-09",
+ "audio_erstellt": "2026-11-09",
+ "hash": "6b7ab0ae567f216cb395ef7193ba1f808c721fb6c91c9690ceefa9cebfa3e7e6",
  "anzahl": 15,
- "dauer_s": 121.0,
+ "dauer_s": 114.6,
  "stimme": "de_DE-thorsten-high",
  "woerter": [
   {
    "id": "296",
    "hindi": "इधर",
    "translit": "idhar",
-   "de": "hierher, hier"
+   "de": "hier"
   },
   {
    "id": "163",
    "hindi": "ऐसा",
    "translit": "aisā",
-   "de": "so, solch"
+   "de": "so"
   },
   {
    "id": "962",
    "hindi": "ओर",
    "translit": "or",
-   "de": "Seite, Richtung"
+   "de": "Richtung"
   },
   {
    "id": "19",
@@ -34,7 +34,7 @@
    "id": "8",
    "hindi": "ठीक",
    "translit": "ṭhīk",
-   "de": "richtig, in Ordnung"
+   "de": "richtig"
   },
   {
    "id": "692",
@@ -46,13 +46,13 @@
    "id": "333",
    "hindi": "उधर",
    "translit": "udhar",
-   "de": "dorthin, dort"
+   "de": "dort"
   },
   {
    "id": "681",
    "hindi": "किधर",
    "translit": "kidhar",
-   "de": "wohin, in welche Richtung"
+   "de": "wohin"
   },
   {
    "id": "48",

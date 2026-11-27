@@ -1,16 +1,22 @@
 {
- "stand": "2026-11-23",
- "audio_erstellt": "2026-11-09",
- "hash": "6b7ab0ae567f216cb395ef7193ba1f808c721fb6c91c9690ceefa9cebfa3e7e6",
+ "stand": "2026-11-27",
+ "audio_erstellt": "2026-11-27",
+ "hash": "15a2cc9b848fd6d66f38ba72da2f73ad8c39df7404dbb784d9c9deef25fd3fb3",
  "anzahl": 15,
- "dauer_s": 114.6,
+ "dauer_s": 114.8,
  "stimme": "de_DE-thorsten-high",
  "woerter": [
   {
-   "id": "296",
-   "hindi": "इधर",
-   "translit": "idhar",
-   "de": "hier"
+   "id": "961",
+   "hindi": "ऋषि",
+   "translit": "riṣi",
+   "de": "der Weise"
+  },
+  {
+   "id": "145",
+   "hindi": "उसका",
+   "translit": "uskā",
+   "de": "sein, ihr"
   },
   {
    "id": "163",
@@ -19,16 +25,22 @@
    "de": "so"
   },
   {
-   "id": "962",
-   "hindi": "ओर",
-   "translit": "or",
-   "de": "Richtung"
+   "id": "223",
+   "hindi": "औरत",
+   "translit": "aurat",
+   "de": "Frau"
   },
   {
    "id": "19",
    "hindi": "कहाँ",
    "translit": "kahāṁ",
    "de": "wo"
+  },
+  {
+   "id": "26",
+   "hindi": "कम",
+   "translit": "kam",
+   "de": "wenig"
   },
   {
    "id": "8",
@@ -55,16 +67,10 @@
    "de": "wohin"
   },
   {
-   "id": "48",
-   "hindi": "तीन",
-   "translit": "tīn",
-   "de": "drei"
-  },
-  {
-   "id": "6",
-   "hindi": "नहीं",
-   "translit": "nahīṁ",
-   "de": "nein, nicht"
+   "id": "79",
+   "hindi": "दूध",
+   "translit": "dūdh",
+   "de": "Milch"
   },
   {
    "id": "37",
@@ -89,12 +95,6 @@
    "hindi": "वहाँ",
    "translit": "vahāṁ",
    "de": "dort"
-  },
-  {
-   "id": "61",
-   "hindi": "कैसे",
-   "translit": "kaise",
-   "de": "wie"
   }
  ],
  "fehler": null
